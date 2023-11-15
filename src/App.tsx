@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsxImportSource @emotion/react */
+import emotionReset from 'emotion-reset';
+import { Global, css } from '@emotion/react';
+import { Top } from './Components/Pages/Top';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Global styles={css`
+        ${emotionReset}
+        body {
+          font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+        }
+
+        *, *::after, *::before {
+          box-sizing: border-box;
+        }
+      `} />
+      <Top />
+    </>
   );
 }
 
