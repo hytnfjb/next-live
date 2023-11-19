@@ -9,6 +9,7 @@ const contentWrapper = css`
   width: 100vw;
   height: 100svh;
   background-color: #10181F;
+  position: relative;
 `
 
 type DescriptionDataProps = {
@@ -23,7 +24,7 @@ type DescriptionDataProps = {
   isOneDrink: boolean | null;
 };
 
-export const MainVisual = () => {
+export const MainVisual: React.FC = () => {
 
   const [descriptionData, setDescriptionData] = useState<DescriptionDataProps>({
     image: '',
