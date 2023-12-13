@@ -8,7 +8,7 @@ const contentWrapper = css`
   width: 100vw;
   height: 45svh;
   color: #fff;
-  background-color: #10181F;
+  background-color: #251234;
   padding: 2svh 5vw;
   position: absolute;
   top: 55svh;
@@ -23,6 +23,7 @@ const contentInner = css`
   padding: 3svh 4vw;
   filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 1));
   overflow: scroll;
+  border-radius: 10px;
 `
 
 const liveTitle = css`
@@ -32,11 +33,11 @@ const liveTitle = css`
   letter-spacing: 0.05em;
   text-align: center;
   text-shadow:
-    1px 1px 0 #063E5D,
-    2px 2px 0 #063E5D,
-    3px 3px 0 #063E5D,
-    4px 4px 0 #063E5D,
-    5px 5px 0 #063E5D;
+    1px 1px 0 #35286B,
+    2px 2px 0 #35286B,
+    3px 3px 0 #35286B,
+    4px 4px 0 #35286B,
+    5px 5px 0 #35286B;
   margin-bottom: 3svh;
 `
 
@@ -51,7 +52,7 @@ const highlight = css`
 `
 
 const anchor = css`
-  color: #0275AB;
+  color: #7837C0;
 `
 
 type DescriptionDataProps = {
@@ -89,7 +90,7 @@ export const MainDescription: React.FC<DescriptionDataProps> = ({
     <>
       <div css={contentWrapper}>
         <div css={contentInner}>
-          <h1 css={liveTitle}>NextLive</h1>
+          {/* <h1 css={liveTitle}>NextLive</h1> */}
           <p css={detailList}>
             <span css={highlight}>{formatYear}</span>年
             <span css={highlight}>{formatMonth}</span>月

@@ -47,8 +47,6 @@ export const MainVisual: React.FC = () => {
     });
     try {
       const resData = await res.json();
-      console.log(resData);
-      
       const data = resData.contents[0];
 
       setDescriptionData((prevState) => {
